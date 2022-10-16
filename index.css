@@ -1,0 +1,104 @@
+:root {
+    --prm-color: #4836C8;
+    --prm-gray: #b1b1b1;
+}
+/*  unnecessary */
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  flex-direction:column;
+}
+
+/*  unnecessary finished*/
+
+/* CSS */
+.steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.step-button { 
+    border: none;
+    background-color: var(--prm-gray);
+    transition: .4s;
+}
+
+.step-button[aria-expanded="true"] {
+    
+}
+
+.done {
+    background-color: var(--prm-color);
+    color: #fff;
+}
+
+.step-item {
+    z-index: 10;
+    text-align: center;
+    margin-left: 15px;
+
+}
+
+#progress {
+  -webkit-appearance:none;
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+   
+    margin-left: 18px;
+    margin-bottom: 18px;
+
+    display: flex;
+    height: 1rem;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+
+   
+}
+
+/* to customize progress bar */
+#progress::-webkit-progress-value {
+   
+    transition: .5s ease;
+    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-size: 1rem 1rem;
+
+}
+
+#progress::-webkit-progress-bar {
+    background-color: var(--prm-gray);
+
+}
+.input-group{
+    margin-top: 20px;
+}
+
+input, select{
+    width: 100%;
+    height: 3rem;
+    border: 3px#4836C8 solid !important;
+    border-radius: 15px !important;
+}
+label{
+    margin-left: 20px;
+    color: #4836C8;
+}
+input,::placeholder{
+    color: #000000;
+    padding: 10px !important;
+    font-size: 10px !important;
+}
+.btn{
+    width: 12% !important;
+    text-align: center !important;
+    background-color: #4836C8 !important;
+    color: #ffffff !important;
+    
+}
