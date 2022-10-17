@@ -5,80 +5,141 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>add user</title>
-    <link rel="stylesheet" href="progresss.css">
+    <link rel="stylesheet" href="css/progress.css">
+    <link rel="stylesheet" href="bs/bootstrap.css">
 </head>
 <body>
-    
-<form action="#" class="form">
-    <div class="form-step form-step-active">
-        <label for="Firstname">Firstname</label>
-        <input type="text" name="Firstname" id="Firstname">
+    <div class="container-fluid text-primary">
+        <div class="container">
+            <h1 class="mb-5">Title</h1>
+            <div>
+                <!-- Tab Panel -->
+                <nav class="form-label">
+                    <div class="nav nav-tabs   nav-justified" id="nav-tab" role="tablist"  class="nav nav-fill mb-">
+                      <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#profile_tab" type="button" role="tab" aria-controls="nav-profile" aria-selected="true">Profile</button>
+                      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#salary_tab" type="button" role="tab" aria-controls="nav-salary" aria-selected="false">Salary</button>
+                      <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#pension_tab" type="button" role="tab" aria-controls="nav-pension" aria-selected="false">Pension</button>
+                      <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#account_tab" type="button" role="tab" aria-controls="nav-account" aria-selected="false">Account</button>
+                    </div>
+                </nav>
+                <!-- Progress Bar -->
+                <div class="progress mt-4 mb-4">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+                </div>
+                <!-- Tab Contents -->
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="profile_tab" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+                        <!-- Profile Form -->
+                        <form method="post">
+                            <h2>Profile Form</h2>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="salary_tab" role="tabpanel" aria-labelledby="nav-salary-tab" tabindex="0">
+                        <!-- Salary Form --> 
+                        <form method="post">
+                            <h2>Salary Form</h2>
+                            <div class="mb-4">
+                                <form method="post">
+                                    <div class="row">
+                                        <div class=" col-md-6">
+                                            <label for="inputsalary" class="form-label">Monthly gross salary(Editable)</label>
+                                            <input type="text" id="InputSalary" class="form-control" placeholder="Enter  monthly gross salary">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputagsalary" class="form-label">Anual gross salary</label>
+                                            <input type="text" id="InputAGSalary" class="form-control" placeholder="Enter annual gross salary">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class=" col-md-6">
+                                            <label for="inputmnsalary" class="form-label">Monthly net salary</label>
+                                            <input type="text" id="InputSalary" class="form-control" placeholder="Enter monthly net salary">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputagsalary" class="form-label">Anual net salary</label>
+                                            <input type="text" id="InputMNSalary" class="form-control" placeholder="Enter annual net salary">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class=" col-md-6">
+                                            <label for="inputmpension" class="form-label">Monthly  pension</label>
+                                            <input type="text" id="InputPension" class="form-control" placeholder="Enter monthly pension">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputanpension" class="form-label">Anual pension</label>
+                                            <input type="text" id="InputAPension" class="form-control" placeholder="Enter annual pension">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class=" col-md-6">
+                                            <label for="inputmtax" class="form-label">Monthly  pension</label>
+                                            <input type="text" id="InputMTax" class="form-control">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputmtax" class="form-label">Anual pension</label>
+                                            <input type="text" id="InputATax" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="mt-4">
+                                        <a href="#" target="" id="btn">Next</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="pension_tab" role="tabpanel" aria-labelledby="nav-pension-tab" tabindex="0">
+                        <!-- Pension Form -->
+                        <form method="post">
+                            <h2>Pension Form</h2>
+                            <div class="mb-4">
+                               <div class="col-md-3">
+                                    <label for="compcode" class="form-label">Company pension code</label>
+                                    <input type="text" class="form-control" id="InputCPcode">
+                                <!-- <input type="file" name="" id=""> -->
+                               </div>
+                               <div class="">
+                                    <div class="col-md-6">
+                                        <label for="Firstname"  class="form-label">Firstname</label>
+                                        <input type="text" id="FirstName" class="form-control" placeholder="Enter your Firstname" >
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="Laststname"  class="form-label">Lasttname</label>
+                                        <input type="text" id="LaststName" class="form-control" placeholder="Enter your Lastname">
+                                    </div>
+                               </div>
+                               <div class="col-md-6">
+                                    <label for="pensioncode" class="form-label">Are you under pension scheme?</label>
+                                    <select name="" id="selectoption" class="form-select">
+                                        <option selected>select option</option>
+                                        <option value="1">Yes</option>
+                                        <option value="2">No </option>
+                                        <option value="3"><a href="#">Create account</a></option>
 
-    </div>
-
-    <div class="input-group">
-        <label for="lastname"></label>
-        <input type="text" name="Lastname" id="Lastname">
-    </div>
-
-    <div class="input-group">
-        <label for="Email">Email(Optional)</label>
-        <input type="email" name="Email" id="Email">
-    </div>
-
-    <div class="input-group">
-        <label for="Phone Number">Phone</label>
-        <input type="number" name="phoneNumber" id="phoneNumber">
-    </div>
-
-    <div class="input-group">
-        <label for="State">State</label>
-       <select name="State" id="State" >
-        <option>Select State</option>
-        <option>Akwa Ibom</option>
-        <option>Anambra</option>
-        <option>Bauchi</option>
-        <option>Bayelsa</option>
-        <option>Benue</option>
-        <option>Borno</option>
-        <option>Cross River</option>
-        <option>Delta</option>
-        <option>Ebonyi</option>
-        <option>Edo</option>
-        <option>Ekiti</option>
-        <option>Enugu</option>
-        <option>Gombe</option>
-        <option>Imo</option>
-        <option>Jigawa</option>
-        <option>Kaduna</option>
-        <option>Kano</option>
-        <option>Katsina</option>
-        <option>Kebbi</option>
-        <option>Kogi</option>
-        <option>Kwara</option>
-        <option>Lagos</option>
-        <option>Nassarawa</option>
-        <option>Niger</option>
-        <option>Ogun</option>
-        <option>Ondo</option>
-        <option>Osun</option>
-        <option>Oyo</option>
-        <option>Plateau</option>
-        <option>Rivers</option>
-        <option>Sokoto</option>
-        <option>Taraba</option>
-        <option>Yobe</option>
-        <option>Zamfara</option> 
-
-       </select>
-    </div>
-
-    
-</form>
-
-
-
-    <script src="progress.js"></script>
+                                    </select>
+                               </div>
+                               <div class="col-md-6">
+                                    <label for="empoloyeecode" class="form-label">Enter your pension code</label>
+                                    <input type="text" class="form-control" id="LastName" placeholder="Enter your pension code">
+                               </div>
+                               <div class="mt-4">
+                                <a href="#" target="" id="btn">Next</a>
+                            </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="account_tab" role="tabpanel" aria-labelledby="nav-account-tab" tabindex="0">
+                        <!-- Account Form -->
+                        <form method="post">
+                            <h2>Account Form</h2>
+                            <div class="mb-4">
+                            </div>
+                        </form>
+                    </div>
+                </div>     
+            </div>
+        </div>
+    </div> 
+    <script src="bs/bootstrap.bundle.js"></script>
 </body>
 
 </html>

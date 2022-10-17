@@ -1,0 +1,28 @@
+.form-label{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.h1{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.form-label{
+    margin-top: 18px;
+}
+.pager{
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 15px;
+    margin-top: 10px;
+}
+#btn{
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgb(35, 35, 172);
+    border-radius: 20px;
+}
