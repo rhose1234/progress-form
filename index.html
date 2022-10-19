@@ -15,16 +15,16 @@
             <div>
                 <!-- Tab Panel -->
                 <nav class="form-label">
-                    <div class="nav nav-tabs   nav-justified" id="nav-tab" role="tablist"  class="nav nav-fill mb-">
-                      <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#profile_tab" type="button" role="tab" aria-controls="nav-profile" aria-selected="true">Profile</button>
-                      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#salary_tab" type="button" role="tab" aria-controls="nav-salary" aria-selected="false">Salary</button>
-                      <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#pension_tab" type="button" role="tab" aria-controls="nav-pension" aria-selected="false">Pension</button>
-                      <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#account_tab" type="button" role="tab" aria-controls="nav-account" aria-selected="false">Account</button>
+                    <div class="nav nav-tabs nav nav-fill nav-justified" id="nav-tab" role="tablist">
+                      <button class="nav-link active" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#profile_tab" type="button" role="tab" aria-controls="nav-profile" aria-selected="true">Profile</button>
+                      <button class="nav-link" id="nav-salary-tab" data-bs-toggle="tab" data-bs-target="#salary_tab" type="button" role="tab" aria-controls="nav-salary" aria-selected="false">Salary</button>
+                      <button class="nav-link" id="nav-pension-tab" data-bs-toggle="tab" data-bs-target="#pension_tab" type="button" role="tab" aria-controls="nav-pension" aria-selected="false">Pension</button>
+                      <button class="nav-link" id="nav-account-tab" data-bs-toggle="tab" data-bs-target="#account_tab" type="button" role="tab" aria-controls="nav-account" aria-selected="false">Account</button>
                     </div>
                 </nav>
                 <!-- Progress Bar -->
                 <div class="progress mt-4 mb-4">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 50%"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" id="pb" role="progressbar" aria-label="Animated striped example" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 25%"></div>
                 </div>
                 <!-- Tab Contents -->
                 <div class="tab-content" id="nav-tabContent">
@@ -36,7 +36,7 @@
                     </div>
                     <div class="tab-pane fade" id="salary_tab" role="tabpanel" aria-labelledby="nav-salary-tab" tabindex="0">
                         <!-- Salary Form --> 
-                        <form method="post">
+                        <form method="post" id="formSalary">
                             <h2>Salary Form</h2>
                             <div class="mb-4">
                                 <form method="post">
@@ -81,7 +81,7 @@
                                         </div>
                                     </div>
                                     <div class="mt-4">
-                                        <a href="#" target="" id="btn">Next</a>
+                                        <button type="submit">Next</button>
                                     </div>
                                 </form>
                             </div>
@@ -103,7 +103,7 @@
                                         <input type="text" id="FirstName" class="form-control" placeholder="Enter your Firstname" >
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="Laststname"  class="form-label">Lasttname</label>
+                                        <label for="Laststname"  class="form-label">Lastname</label>
                                         <input type="text" id="LaststName" class="form-control" placeholder="Enter your Lastname">
                                     </div>
                                </div>
@@ -122,8 +122,8 @@
                                     <input type="text" class="form-control" id="LastName" placeholder="Enter your pension code">
                                </div>
                                <div class="mt-4">
-                                <a href="#" target="" id="btn">Next</a>
-                            </div>
+                                  <button type="submit">Next</button>
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -140,6 +140,41 @@
         </div>
     </div> 
     <script src="bs/bootstrap.bundle.js"></script>
+    <script>
+        var proTab = document.querySelector('#nav-profile-tab')
+        var salaryTab = document.querySelector('#nav-salary-tab')
+        var pensionTab = document.querySelector('#nav-pension-tab')
+        var accountTab = document.querySelector('#nav-account-tab')
+        var proressbar = document.getElementById('pb')
+
+
+        proTab.addEventListener('click', (e)=>{
+            proressbar.style.width = "25%";
+            console.log("done")
+        })
+
+        salaryTab.addEventListener('çlick', (e)=>{
+            proressbar.style.width = "50%";
+            console.log("done")
+        })
+
+        pensionTab.addEventListener('çlick', (e)=>{
+            proressbar.style.width = "75%"
+        })
+
+        accountTab.addEventListener('çlick', (e)=>{
+            proressbar.style.width = "100%"
+        })
+
+        // Submit event for salary form
+        document.getElementById('formSalary').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            let atab = new bootstrap.Tab(proTab)
+            atab.show(proTab)
+            // alert('ello')
+        })
+    </script>
 </body>
 
 </html>
