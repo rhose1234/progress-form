@@ -153,24 +153,25 @@
             console.log("done")
         })
 
-        salaryTab.addEventListener('çlick', (e)=>{
+        salaryTab.addEventListener('click', (e)=>{
             proressbar.style.width = "50%";
             console.log("done")
         })
 
-        pensionTab.addEventListener('çlick', (e)=>{
-            proressbar.style.width = "75%"
+        pensionTab.addEventListener('click', (e)=>{
+            proressbar.style.width = "75%";
         })
 
-        accountTab.addEventListener('çlick', (e)=>{
-            proressbar.style.width = "100%"
+        accountTab.addEventListener('click', (e)=>{
+            proressbar.style.width = "100%";
         })
 
         // Submit event for salary form
         document.getElementById('formSalary').addEventListener('submit', (e) => {
             e.preventDefault();
 
-            let atab = new bootstrap.Tab(proTab)
+            let atab = new bootstrap.Tab(pensionTab)
+            proressbar.style.width = '75%'
             atab.show(proTab)
             // alert('ello')
         })
